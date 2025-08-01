@@ -1,0 +1,17 @@
+langchain
+langchain-anthropic
+langchain-community
+langchain-core
+langchain-openai
+langchain-tavily
+langchain-text-splitters
+langgraph
+langgraph-api
+langgraph-checkpoint
+langgraph-cli
+langgraph-prebuilt
+langgraph-runtime-inmem
+langgraph-sdk
+langgraph-supervisor
+langsmith
+langmem

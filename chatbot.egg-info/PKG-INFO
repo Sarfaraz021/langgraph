@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: chatbot
+Version: 0.1.0
+Summary: A conversational agent using LangGraph
+Requires-Python: >=3.11
+Requires-Dist: langchain
+Requires-Dist: langchain-anthropic
+Requires-Dist: langchain-community
+Requires-Dist: langchain-core
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-tavily
+Requires-Dist: langchain-text-splitters
+Requires-Dist: langgraph
+Requires-Dist: langgraph-api
+Requires-Dist: langgraph-checkpoint
+Requires-Dist: langgraph-cli
+Requires-Dist: langgraph-prebuilt
+Requires-Dist: langgraph-runtime-inmem
+Requires-Dist: langgraph-sdk
+Requires-Dist: langgraph-supervisor
+Requires-Dist: langsmith
+Requires-Dist: langmem
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary

@@ -58,6 +58,7 @@ Create a `.env` file in the project root directory and add your API keys:
 ANTHROPIC_API_KEY=your_anthropic_api_key_here
 
 # Optional: LangSmith API Key for tracing and debugging
+LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
 LANGCHAIN_API_KEY=your_langchain_api_key_here
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_PROJECT=your_project_name
