@@ -1,0 +1,12 @@
+langchain==0.3.27
+langchain-anthropic==0.3.18
+langchain-core==0.3.72
+langchain-text-splitters==0.3.9
+langgraph==0.6.2
+langgraph-api==0.2.117
+langgraph-checkpoint==2.1.1
+langgraph-cli==0.3.6
+langgraph-prebuilt==0.6.2
+langgraph-runtime-inmem==0.6.8
+langgraph-sdk==0.2.0
+langsmith==0.4.9

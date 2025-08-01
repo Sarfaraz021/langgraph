@@ -1,0 +1,30 @@
+{
+    "dependencies": [
+      "./les-01",
+      "langchain",
+      "langchain-anthropic",
+      "langchain-community",
+      "langchain-core",
+      "langchain-openai",
+      "langchain-tavily",
+      "langchain-text-splitters",
+      "langgraph",
+      "langgraph-api",
+      "langgraph-checkpoint",
+      "langgraph-cli",
+      "langgraph-prebuilt",
+      "langgraph-runtime-inmem",
+      "langgraph-sdk",
+      "langgraph-supervisor",
+      "langsmith",
+      "langmem"
+    ],
+    "env": ".env",
+    "python_version": "3.11",
+    "graphs": {
+        "chatbot": {
+            "path": "les-01/graph.py:graph"
+        }
+    }
+  }
+  
