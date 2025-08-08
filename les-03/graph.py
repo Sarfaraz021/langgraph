@@ -38,4 +38,5 @@ graph_builder.add_conditional_edges(
 graph_builder.add_edge("tools", "chatbot")
 graph_builder.set_entry_point("chatbot")
 memory = InMemorySaver()
-graph = graph_builder.compile(checkpointer=memory)
+# graph = graph_builder.compile(checkpointer=memory)
+graph = graph_builder.compile()
