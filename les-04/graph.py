@@ -1,22 +1,24 @@
 from typing import Annotated
+
+from langchain.chat_models import init_chat_model
 from langchain_tavily import TavilySearch
 from typing_extensions import TypedDict
-from langchain_openai import ChatOpenAI
-from langgraph.graph import StateGraph, START, END
+from langgraph.checkpoint.memory import InMemorySaver
+from langgraph.graph import StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode, tools_condition
 from dotenv import load_dotenv
 
-# load environment variables
 load_dotenv()
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = init_chat_model("anthropic:claude-3-5-sonnet-latest", temperature=0.7)
 
 class State(TypedDict):
     messages: Annotated[list, add_messages]
 
 graph_builder = StateGraph(State)
 
+# add tools to the LLM
 tool = TavilySearch(max_results=2)
 tools = [tool]
 llm_with_tools = llm.bind_tools(tools)
@@ -33,12 +35,8 @@ graph_builder.add_conditional_edges(
     "chatbot",
     tools_condition,
 )
-# Any time a tool is called, we return to the chatbot to decide the next step
 graph_builder.add_edge("tools", "chatbot")
-graph_builder.add_edge(START, "chatbot")
-graph_builder.add_edge("chatbot", END)
+graph_builder.set_entry_point("chatbot")
+memory = InMemorySaver()
+# graph = graph_builder.compile(checkpointer=memory)
 graph = graph_builder.compile()
-
-
-
-# pip install -U langchain-tavily
