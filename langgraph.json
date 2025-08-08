@@ -23,7 +23,7 @@
     "python_version": "3.11",
     "graphs": {
         "chatbot": {
-            "path": "les-03/graph.py:graph"
+            "path": "les-04/graph.py:graph"
         }
     }
   }
